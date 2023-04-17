@@ -3,3 +3,16 @@
 #  (Примеры: АКВАРЕЛИСТ-КАВАЛЕРИСТ, АНТИМОНИЯ-АНТИНОМИЯ, АНАКОНДА-КАНОНАДА, ВЕРНОСТЬ-РЕВНОСТЬ, ВЛАДЕНИЕ-ДАВЛЕНИЕ, ЛЕПЕСТОК-ТЕЛЕСКОП)
 
 s = input().split()
+word1 = s[0]
+word2 = s[1]
+
+#print(word1, word2)
+
+word1 = sorted(word1)
+word2 = sorted(word2)
+
+#print(word1, word2)
+if word1 == word2:
+    print("True")
+else:
+    print("False")
