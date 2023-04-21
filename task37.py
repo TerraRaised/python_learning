@@ -1,5 +1,3 @@
-
-
 #todo: Реализовать декоратор в котором нужно подсчитать кол-во вызовов декорированной функции в процессе выполнения кода.
 # Выгрузить статистику подсчета в файл debug.log в формате: Название функции, кол-во вызовов, дата-время последнего выполнения
 # Пример:
@@ -24,19 +22,20 @@ def goodbye():
 
 def wrapper(func):
     fd = open("data.log", "a")
-    global counter
+    print("input number of recursions: ")
+    x = int(input())
     counter = 0
-    counter += 1
+    while x > 0:
+        x -= 1
+        func
+        counter += 1
     call = time.localtime()
     call_str = time.strftime("%d.%m.%Y %H:%M", call)
-    log_str = name + str(counter) + " " + call_str
+    log_str = name + str(counter) + " " + call_str + "\n"
     print(log_str)
     fd.write(log_str)
 
  #   print(call_str)
 
-print("input number of recursions: ")
-x = int(input())
-while x > 0:
-    wrapper(goodbye())
-    x -= 1
+
+wrapper(hello())
