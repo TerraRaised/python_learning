@@ -15,7 +15,6 @@
 # Сделайте функцию get_weekday() статической в классе Helper
 def get_week_day(number):
     try:
-
         if number % 1 != 0:
             raise TypeError
         elif number > 7:
